@@ -1,27 +1,146 @@
 proxies:
-  - {name: opentunnel.net-razz, server: 104.17.2.81, port: 443, type: vless, uuid: 4f17e173-4af9-5041-9662-f6c27e0decfd, cipher: auto, tls: true, skip-cert-verify: true, servername: api.midtrans.com, network: ws, ws-opts: {path: "ws://api.midtrans.com/opentunnel?user=opentunnel.net-razz", headers: {Host: idx-1.openv2ray.com}}, udp: true}
-  - {name: sg1.vless.co, server: 104.17.2.81, port: 443, type: vless, uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5, cipher: auto, tls: true, skip-cert-verify: true, servername: api.midtrans.com, network: ws, ws-opts: {path: ws://api.midtrans.com/fastssh/razz/62fb33f608883/, headers: {Host: sg1.vless.co}}, udp: true}
-  - {name: sxtcp-admin, server: 104.17.2.81, port: 443, type: vmess, uuid: e4134d12-c932-40b1-a68d-0039cdaefef1, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: api.midtrans.com, network: ws, ws-opts: {path: ws://api.midtrans.com/herbalserver, headers: {Host: sgf-1.herbalv2ray.me}}, udp: true}
-  - {name: vless-ws-tls, server: 104.17.2.81, port: 443, type: vless, uuid: 5b1fb8be-da9f-436a-a33a-18a5343567b7, cipher: auto, tls: true, skip-cert-verify: true, servername: api.midtrans.com, network: ws, ws-opts: {path: ws://api.midtrans.com/vless, headers: {Host: sg2-full.privateip.net}}, udp: true}
-proxy-groups:
-  - name: FASTSSH-SSHKIT-HOWDY
-    type: select
-    proxies:
-      - opentunnel.net-razz
-      - sg1.vless.co
-      - sxtcp-admin
-      - vless-ws-tls
-      - LOAD-BALANCE
-      - DIRECT
-  - name: LOAD-BALANCE
-    type: load-balance
-    strategy: round-robin
-    url: http://hi.bonds.id/ping
-    interval: 300
-    proxies:
-      - opentunnel.net-razz
-      - sg1.vless.co
-      - sxtcp-admin
-      - vless-ws-tls
-rules:
-  - MATCH,LOAD-BALANCE
+  - name: sxtcp-devien11
+    server: 104.22.24.131
+    port: 443
+    type: vmess
+    uuid: 358c69a1-41b3-4609-b00a-154cc1bb9af4
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgdo-1.herbalv2ray.me
+    network: ws
+    ws-opts:
+      path: /herbalserver
+      headers:
+        Host: sgdo-1.herbalv2ray.me
+    udp: true
+    interface-name: eth4
+  - name: sxtcp-devien11 2
+    server: 104.22.24.131
+    port: 80
+    type: vmess
+    uuid: 358c69a1-41b3-4609-b00a-154cc1bb9af4
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: sgdo-1.herbalv2ray.me
+    network: ws
+    ws-opts:
+      path: /herbalserver
+      headers:
+        Host: sgdo-1.herbalv2ray.me
+    udp: true
+    interface-name: eth4
+  - name: sxtcp-1qaz
+    server: www.udemy.com
+    port: 443
+    type: vmess
+    uuid: 263efea5-9031-440f-b8a3-a6c7bc39fa5b
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgdo-1.herbalv2ray.me
+    network: ws
+    ws-opts:
+      path: /herbalserver
+      headers:
+        Host: sgdo-1.herbalv2ray.me
+    udp: true
+    interface-name: eth4
+  - name: sxtcp-1qaz 2
+    server: www.udemy.com
+    port: 80
+    type: vmess
+    uuid: 263efea5-9031-440f-b8a3-a6c7bc39fa5b
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: sgdo-1.herbalv2ray.me
+    network: ws
+    ws-opts:
+      path: /herbalserver
+      headers:
+        Host: sgdo-1.herbalv2ray.me
+    udp: true
+    interface-name: eth4
+  - name: sxtcp-devien11 3
+    server: sgdo-1.herbalv2ray.me
+    port: 443
+    type: vmess
+    uuid: 358c69a1-41b3-4609-b00a-154cc1bb9af4
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: meet.google.com
+    network: ws
+    ws-opts:
+      path: /herbalserver
+      headers:
+        Host: meet.google.com
+    udp: true
+    interface-name: eth1
+  - name: sxtcp-devien11 4
+    server: sgdo-1.herbalv2ray.me
+    port: 80
+    type: vmess
+    uuid: 358c69a1-41b3-4609-b00a-154cc1bb9af4
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: trouter2-azsc-krce-3-b.trouter.teams.microsoft.com
+    network: ws
+    ws-opts:
+      path: /herbalserver
+      headers:
+        Host: trouter2-azsc-krce-3-b.trouter.teams.microsoft.com
+    udp: true
+    interface-name: eth1
+  - name: trojan-tcp
+    server: sg2-full.privateip.net
+    port: 443
+    type: trojan
+    password: e690246e-57c3-4c7b-8f25-5f2034a4d1f4
+    skip-cert-verify: true
+    sni: w4.web.whatsapp.com
+    udp: true
+    interface-name: eth1
+  - name: sxtcp-1qaz 3
+    server: 104.20.74.141
+    port: 443
+    type: vmess
+    uuid: 263efea5-9031-440f-b8a3-a6c7bc39fa5b
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    servername: sgdo-1.herbalv2ray.me
+    network: ws
+    ws-opts:
+      path: /herbalserver
+      headers:
+        Host: sgdo-1.herbalv2ray.me
+    udp: true
+    interface-name: eth1
+  - name: sxtcp-1qaz 4
+    server: 104.20.74.141
+    port: 80
+    type: vmess
+    uuid: 263efea5-9031-440f-b8a3-a6c7bc39fa5b
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    servername: sgdo-1.herbalv2ray.me
+    network: ws
+    ws-opts:
+      path: /herbalserver
+      headers:
+        Host: sgdo-1.herbalv2ray.me
+    udp: true
+    interface-name: eth1
