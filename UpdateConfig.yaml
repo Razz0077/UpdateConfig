@@ -1,132 +1,20 @@
 proxies:
-  - name: sg1.vless.co
-    server: 104.17.2.81
-    port: 443
-    type: vless
-    uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: api.midtrans.com
-    network: ws
-    ws-opts:
-      path: ws://api.midtrans.com/fastssh/razz/62fb33f608883/
-      headers:
-        Host: sg1.vless.co
-    udp: true
-  - name: vless-ws-tls
-    server: 104.17.2.81
-    port: 443
-    type: vless
-    uuid: 5b1fb8be-da9f-436a-a33a-18a5343567b7
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: api.midtrans.com
-    network: ws
-    ws-opts:
-      path: ws://api.midtrans.com/vless
-      headers:
-        Host: sg2-full.privateip.net
-    udp: true
-  - name: sshocean-TJ
-    server: 104.17.2.81
-    port: 443
-    type: trojan
-    password: 300e877e-729a-4b74-9b6e-0b52bf4febe3
-    skip-cert-verify: true
-    sni: api.midtrans.com
-    network: ws
-    ws-opts:
-      path: ws://api.midtrans.com/websocket
-      headers:
-        Host: idt3.sshocean.net
-    udp: true
-  - name: sshocean-Xray
-    server: 104.17.2.81
-    port: 443
-    type: vless
-    uuid: fdf8203f-25b2-4024-9888-d893d75ba784
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: api.midtrans.com
-    network: ws
-    ws-opts:
-      path: ws://api.midtrans.com/websocket
-      headers:
-        Host: sg1-ctb-ws.xvless.xyz
-    udp: true
-  - name: sg1.vless.co 2
-    server: 104.22.24.131
-    port: 443
-    type: vless
-    uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg1.vless.co
-    network: ws
-    ws-opts:
-      path: /fastssh/razz/62fb33f608883/
-      headers:
-        Host: sg1.vless.co
-    udp: true
-  - name: vless-ws-tls 2
-    server: 104.22.24.131
-    port: 443
-    type: vless
-    uuid: 5b1fb8be-da9f-436a-a33a-18a5343567b7
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg2-full.privateip.net
-    network: ws
-    ws-opts:
-      path: /vless
-      headers:
-        Host: sg2-full.privateip.net
-    udp: true
-  - name: sshocean-TJ 2
-    server: 104.22.24.131
-    port: 443
-    type: trojan
-    password: 300e877e-729a-4b74-9b6e-0b52bf4febe3
-    skip-cert-verify: true
-    sni: idt3.sshocean.net
-    network: ws
-    ws-opts:
-      path: /websocket
-      headers:
-        Host: idt3.sshocean.net
-    udp: true
-  - name: sshocean-Xray 2
-    server: 104.22.24.131
-    port: 443
-    type: vless
-    uuid: fdf8203f-25b2-4024-9888-d893d75ba784
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    servername: sg1-ctb-ws.xvless.xyz
-    network: ws
-    ws-opts:
-      path: /websocket
-      headers:
-        Host: sg1-ctb-ws.xvless.xyz
-    udp: true
+  - {name: sxtcp-owner0, server: 104.17.2.81, port: 443, type: vmess, uuid: 5d452c53-2c9b-487e-a644-9bf1c8251e6f, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: api.midtrans.com, network: ws, ws-opts: {path: wss://api.midtrans.com/herbalserver, headers: {Host: sgdo-1.herbalv2ray.me}}, udp: true}
+  - {name: vless-ws-tls0, server: 104.17.2.81, port: 443, type: vless, uuid: 8e093141-f639-4ba0-9444-bc259d970ec4, cipher: auto, tls: true, skip-cert-verify: true, servername: api.midtrans.com, network: ws, ws-opts: {path: wss://api.midtrans.com/vless, headers: {Host: sg2-full.privateip.net}}, udp: true}
+  - {name: sg2.vless.co0, server: 104.17.2.81, port: 443, type: vless, uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5, cipher: auto, tls: true, skip-cert-verify: true, servername: api.midtrans.com, network: ws, ws-opts: {path: wss://api.midtrans.com/fastssh/razxx/63038ddc03c70/, headers: {Host: sg2.vless.co}}, udp: true}
+  - {name: sxtcp-owner, server: 104.22.24.131, port: 443, type: vmess, uuid: 5d452c53-2c9b-487e-a644-9bf1c8251e6f, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: sgdo-1.herbalv2ray.me, network: ws, ws-opts: {path: /herbalserver, headers: {Host: sgdo-1.herbalv2ray.me}}, udp: true}
+  - {name: vless-ws-tls, server: 104.22.24.131, port: 443, type: vless, uuid: 8e093141-f639-4ba0-9444-bc259d970ec4, cipher: auto, tls: true, skip-cert-verify: true, servername: sg2-full.privateip.net, network: ws, ws-opts: {path: /vless, headers: {Host: sg2-full.privateip.net}}, udp: true}
+  - {name: sg2.vless.co, server: 104.22.24.131, port: 443, type: vless, uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5, cipher: auto, tls: true, skip-cert-verify: true, servername: sg2.vless.co, network: ws, ws-opts: {path: /fastssh/razxx/63038ddc03c70/, headers: {Host: sg2.vless.co}}, udp: true}
 proxy-groups:
   - name: FASTSSH-SSHKIT-HOWDY
     type: select
     proxies:
-      - sg1.vless.co
+      - sxtcp-owner0
+      - vless-ws-tls0
+      - sg2.vless.co0
+      - sxtcp-owner
       - vless-ws-tls
-      - sshocean-TJ
-      - sshocean-Xray
-      - sg1.vless.co 2
-      - vless-ws-tls 2
-      - sshocean-TJ 2
-      - sshocean-Xray 2
+      - sg2.vless.co
       - LOAD-BALANCE
       - DIRECT
   - name: LOAD-BALANCE
@@ -135,13 +23,11 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - sg1.vless.co
+      - sxtcp-owner0
+      - vless-ws-tls0
+      - sg2.vless.co0
+      - sxtcp-owner
       - vless-ws-tls
-      - sshocean-TJ
-      - sshocean-Xray
-      - sg1.vless.co 2
-      - vless-ws-tls 2
-      - sshocean-TJ 2
-      - sshocean-Xray 2
+      - sg2.vless.co
 rules:
   - MATCH,LOAD-BALANCE
