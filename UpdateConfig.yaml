@@ -1,33 +1,38 @@
 proxies:
-  - {name: sxtcp-owner0, server: 104.17.2.81, port: 443, type: vmess, uuid: 5d452c53-2c9b-487e-a644-9bf1c8251e6f, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: api.midtrans.com, network: ws, ws-opts: {path: wss://api.midtrans.com/herbalserver, headers: {Host: sgdo-1.herbalv2ray.me}}, udp: true}
-  - {name: vless-ws-tls0, server: 104.17.2.81, port: 443, type: vless, uuid: 8e093141-f639-4ba0-9444-bc259d970ec4, cipher: auto, tls: true, skip-cert-verify: true, servername: api.midtrans.com, network: ws, ws-opts: {path: wss://api.midtrans.com/vless, headers: {Host: sg2-full.privateip.net}}, udp: true}
-  - {name: sg2.vless.co0, server: 104.17.2.81, port: 443, type: vless, uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5, cipher: auto, tls: true, skip-cert-verify: true, servername: api.midtrans.com, network: ws, ws-opts: {path: wss://api.midtrans.com/fastssh/razxx/63038ddc03c70/, headers: {Host: sg2.vless.co}}, udp: true}
-  - {name: sxtcp-owner, server: 104.22.24.131, port: 443, type: vmess, uuid: 5d452c53-2c9b-487e-a644-9bf1c8251e6f, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: sgdo-1.herbalv2ray.me, network: ws, ws-opts: {path: /herbalserver, headers: {Host: sgdo-1.herbalv2ray.me}}, udp: true}
-  - {name: vless-ws-tls, server: 104.22.24.131, port: 443, type: vless, uuid: 8e093141-f639-4ba0-9444-bc259d970ec4, cipher: auto, tls: true, skip-cert-verify: true, servername: sg2-full.privateip.net, network: ws, ws-opts: {path: /vless, headers: {Host: sg2-full.privateip.net}}, udp: true}
-  - {name: sg2.vless.co, server: 104.22.24.131, port: 443, type: vless, uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5, cipher: auto, tls: true, skip-cert-verify: true, servername: sg2.vless.co, network: ws, ws-opts: {path: /fastssh/razxx/63038ddc03c70/, headers: {Host: sg2.vless.co}}, udp: true}
+  - {name: sshoceanTJ0, server: 104.17.2.81, port: 443, type: trojan, password: d0b44c65-a078-4b6d-a52d-813e6774dc96, skip-cert-verify: true, sni: api.midtrans.com, network: ws, ws-opts: {path: ws://api.midtrans.com/websocket, headers: {Host: idt1.sshocean.net}}, udp: true}
+  - {name: sshoceanVless0, server: 104.17.2.81, port: 443, type: vless, uuid: bcaf4dad-262c-4ebc-9cad-ef1ea1132ab5, cipher: auto, tls: true, skip-cert-verify: true, servername: api.midtrans.com, network: ws, ws-opts: {path: wss://api.midtrans.com/websocket, headers: {Host: id1-ws.xvless.xyz}}, udp: true}
+  - {name: FastVless0, server: 104.17.2.81, port: 443, type: vless, uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5, cipher: auto, tls: true, skip-cert-verify: true, servername: api.midtrans.com, network: ws, ws-opts: {path: wss://api.midtrans.com/fastssh/hdjdjdjj/630660b9bccc6/, headers: {Host: sg2.vless.co}}, udp: true}
+  - {name: FastTJ0, server: 104.17.2.81, port: 443, type: trojan, password: 59485850-23d3-11ed-b638-225401db9d57, skip-cert-verify: true, sni: api.midtrans.com, network: ws, ws-opts: {path: wss://api.midtrans.com/fastssh, headers: {Host: sg-ovh.tjvpn.org}}, udp: true}
+  - {name: sshoceanTJ, server: 104.22.24.131, port: 443, type: trojan, password: d0b44c65-a078-4b6d-a52d-813e6774dc96, skip-cert-verify: true, sni: idt1.sshocean.net, network: ws, ws-opts: {path: /websocket, headers: {Host: idt1.sshocean.net}}, udp: true}
+  - {name: sshoceanVless, server: 104.22.24.131, port: 443, type: vless, uuid: bcaf4dad-262c-4ebc-9cad-ef1ea1132ab5, cipher: auto, tls: true, skip-cert-verify: true, servername: id1-ws.xvless.xyz, network: ws, ws-opts: {path: /websocket, headers: {Host: id1-ws.xvless.xyz}}, udp: true}
+  - {name: FastVless, server: 104.22.24.131, port: 443, type: vless, uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5, cipher: auto, tls: true, skip-cert-verify: true, servername: sg2.vless.co, network: ws, ws-opts: {path: /fastssh/hdjdjdjj/630660b9bccc6/, headers: {Host: sg2.vless.co}}, udp: true}
+  - {name: FastTJ, server: 104.22.24.131, port: 443, type: trojan, password: 59485850-23d3-11ed-b638-225401db9d57, skip-cert-verify: true, sni: sg-ovh.tjvpn.org, network: ws, ws-opts: {path: /fastssh, headers: {Host: sg-ovh.tjvpn.org}}, udp: true}
 proxy-groups:
   - name: FASTSSH-SSHKIT-HOWDY
     type: select
     proxies:
-      - sxtcp-owner0
-      - vless-ws-tls0
-      - sg2.vless.co0
-      - sxtcp-owner
-      - vless-ws-tls
-      - sg2.vless.co
-      - LOAD-BALANCE
+      - sshoceanTJ0
+      - sshoceanVless0
+      - FastVless0
+      - FastTJ0
+      - sshoceanTJ
+      - sshoceanVless
+      - FastVless
+      - FastTJ
+      - FALLBACK
       - DIRECT
-  - name: LOAD-BALANCE
-    type: load-balance
-    strategy: round-robin
+  - name: FALLBACK
+    type: fallback
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - sxtcp-owner0
-      - vless-ws-tls0
-      - sg2.vless.co0
-      - sxtcp-owner
-      - vless-ws-tls
-      - sg2.vless.co
+      - sshoceanTJ0
+      - sshoceanVless0
+      - FastVless0
+      - FastTJ0
+      - sshoceanTJ
+      - sshoceanVless
+      - FastVless
+      - FastTJ
 rules:
-  - MATCH,LOAD-BALANCE
+  - MATCH,FALLBACK
