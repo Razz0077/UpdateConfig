@@ -1,24 +1,20 @@
 proxies:
-  - {name: sshoceanTJ0, server: 104.17.2.81, port: 443, type: trojan, password: d0b44c65-a078-4b6d-a52d-813e6774dc96, skip-cert-verify: true, sni: api.midtrans.com, network: ws, ws-opts: {path: ws://api.midtrans.com/websocket, headers: {Host: idt1.sshocean.net}}, udp: true}
-  - {name: sshoceanVless0, server: 104.17.2.81, port: 443, type: vless, uuid: bcaf4dad-262c-4ebc-9cad-ef1ea1132ab5, cipher: auto, tls: true, skip-cert-verify: true, servername: api.midtrans.com, network: ws, ws-opts: {path: wss://api.midtrans.com/websocket, headers: {Host: id1-ws.xvless.xyz}}, udp: true}
-  - {name: FastVless0, server: 104.17.2.81, port: 443, type: vless, uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5, cipher: auto, tls: true, skip-cert-verify: true, servername: api.midtrans.com, network: ws, ws-opts: {path: wss://api.midtrans.com/fastssh/hdjdjdjj/630660b9bccc6/, headers: {Host: sg2.vless.co}}, udp: true}
-  - {name: FastTJ0, server: 104.17.2.81, port: 443, type: trojan, password: 59485850-23d3-11ed-b638-225401db9d57, skip-cert-verify: true, sni: api.midtrans.com, network: ws, ws-opts: {path: wss://api.midtrans.com/fastssh, headers: {Host: sg-ovh.tjvpn.org}}, udp: true}
-  - {name: sshoceanTJ, server: 104.22.24.131, port: 443, type: trojan, password: d0b44c65-a078-4b6d-a52d-813e6774dc96, skip-cert-verify: true, sni: idt1.sshocean.net, network: ws, ws-opts: {path: /websocket, headers: {Host: idt1.sshocean.net}}, udp: true}
-  - {name: sshoceanVless, server: 104.22.24.131, port: 443, type: vless, uuid: bcaf4dad-262c-4ebc-9cad-ef1ea1132ab5, cipher: auto, tls: true, skip-cert-verify: true, servername: id1-ws.xvless.xyz, network: ws, ws-opts: {path: /websocket, headers: {Host: id1-ws.xvless.xyz}}, udp: true}
-  - {name: FastVless, server: 104.22.24.131, port: 443, type: vless, uuid: 81f1f510-3ca7-4734-8956-0f4fce670af5, cipher: auto, tls: true, skip-cert-verify: true, servername: sg2.vless.co, network: ws, ws-opts: {path: /fastssh/hdjdjdjj/630660b9bccc6/, headers: {Host: sg2.vless.co}}, udp: true}
-  - {name: FastTJ, server: 104.22.24.131, port: 443, type: trojan, password: 59485850-23d3-11ed-b638-225401db9d57, skip-cert-verify: true, sni: sg-ovh.tjvpn.org, network: ws, ws-opts: {path: /fastssh, headers: {Host: sg-ovh.tjvpn.org}}, udp: true}
+  - {name: backVIp0, server: 104.17.2.81, port: 443, type: trojan, password: 8bcdef7c-f118-4763-b452-dfe8710be239, skip-cert-verify: true, sni: api.midtrans.com, network: ws, ws-opts: {path: wss://api.midtrans.com/buy-trojan-pm-telegram-at-synricha, headers: {Host: simp.apasih.id}}, udp: true}
+  - {name: TJ-Jagoan0, server: 104.17.2.81, port: 443, type: trojan, password: vvip-kasrun123, skip-cert-verify: true, sni: api.midtrans.com, network: ws, ws-opts: {path: ws://api.midtrans.com/trojan, headers: {Host: sg2tr.jagoan.vip}}, udp: true}
+  - {name: TJ_iptun_0, server: 104.17.2.81, port: 443, type: trojan, password: razz00123123, skip-cert-verify: true, sni: api.midtrans.com, network: ws, ws-opts: {path: ws://api.midtrans.com/buy-trojan-ws-pm-telegram-at-synricha, headers: {Host: nginx-rc-173.apasih.id}}, udp: true}
+  - {name: backVIp, server: 104.22.24.131, port: 443, type: trojan, password: 8bcdef7c-f118-4763-b452-dfe8710be239, skip-cert-verify: true, sni: simp.apasih.id, network: ws, ws-opts: {path: /buy-trojan-pm-telegram-at-synricha, headers: {Host: simp.apasih.id}}, udp: true}
+  - {name: TJ-Jagoan, server: 104.22.24.131, port: 443, type: trojan, password: vvip-kasrun123, skip-cert-verify: true, sni: sg2tr.jagoan.vip, network: ws, ws-opts: {path: /trojan, headers: {Host: sg2tr.jagoan.vip}}, udp: true}
+  - {name: TJ_iptun, server: 104.22.24.131, port: 443, type: trojan, password: razz00123123, skip-cert-verify: true, sni: nginx-rc-173.apasih.id, network: ws, ws-opts: {path: /buy-trojan-ws-pm-telegram-at-synricha, headers: {Host: nginx-rc-173.apasih.id}}, udp: true}
 proxy-groups:
   - name: FASTSSH-SSHKIT-HOWDY
     type: select
     proxies:
-      - sshoceanTJ0
-      - sshoceanVless0
-      - FastVless0
-      - FastTJ0
-      - sshoceanTJ
-      - sshoceanVless
-      - FastVless
-      - FastTJ
+      - backVIp0
+      - TJ-Jagoan0
+      - TJ_iptun_0
+      - backVIp
+      - TJ-Jagoan
+      - TJ_iptun
       - FALLBACK
       - DIRECT
   - name: FALLBACK
@@ -26,13 +22,11 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - sshoceanTJ0
-      - sshoceanVless0
-      - FastVless0
-      - FastTJ0
-      - sshoceanTJ
-      - sshoceanVless
-      - FastVless
-      - FastTJ
+      - backVIp0
+      - TJ-Jagoan0
+      - TJ_iptun_0
+      - backVIp
+      - TJ-Jagoan
+      - TJ_iptun
 rules:
   - MATCH,FALLBACK
