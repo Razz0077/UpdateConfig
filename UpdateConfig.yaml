@@ -1,14 +1,10 @@
 proxies:
-  - {name: TJ-Jagoan0, server: 104.17.2.81, port: 443, type: trojan, password: vvip-kasrun123, skip-cert-verify: true, sni: api.midtrans.com, network: ws, ws-opts: {path: ws://api.midtrans.com/trojan, headers: {Host: sg2tr.jagoan.vip}}, udp: true}
-  - {name: TJ_iptun_0, server: 104.17.2.81, port: 443, type: trojan, password: razz00123123, skip-cert-verify: true, sni: api.midtrans.com, network: ws, ws-opts: {path: ws://api.midtrans.com/buy-trojan-ws-pm-telegram-at-synricha, headers: {Host: nginx-rc-173.apasih.id}}, udp: true}
   - {name: TJ-Jagoan, server: 104.22.24.131, port: 443, type: trojan, password: vvip-kasrun123, skip-cert-verify: true, sni: sg2tr.jagoan.vip, network: ws, ws-opts: {path: /trojan, headers: {Host: sg2tr.jagoan.vip}}, udp: true}
   - {name: TJ_iptun, server: 104.22.24.131, port: 443, type: trojan, password: razz00123123, skip-cert-verify: true, sni: nginx-rc-173.apasih.id, network: ws, ws-opts: {path: /buy-trojan-ws-pm-telegram-at-synricha, headers: {Host: nginx-rc-173.apasih.id}}, udp: true}
 proxy-groups:
   - name: AutoUpdate
     type: select
     proxies:
-      - TJ-Jagoan0
-      - TJ_iptun_0
       - TJ-Jagoan
       - TJ_iptun
       - FALLBACK
@@ -18,8 +14,6 @@ proxy-groups:
     url: http://hi.bonds.id/ping
     interval: 300
     proxies:
-      - TJ-Jagoan0
-      - TJ_iptun_0
       - TJ-Jagoan
       - TJ_iptun
 rules:
